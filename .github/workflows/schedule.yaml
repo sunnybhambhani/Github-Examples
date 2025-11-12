@@ -1,12 +1,10 @@
-name: schedule
-
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: '*/1 * * * *'
 
 jobs:
-  test_schedule:
+  hello_world:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo hello
-        run: echo "Hi, this is from a schedule and date $(date)"
+      - name: Echo current time
+        run: echo "The current server time is $(date)"
